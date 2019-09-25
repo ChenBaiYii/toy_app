@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
 
 
   def hello
+
+    (User.all).each do |x|
+      puts x.name
+    end
     render html: 'hello, world!'
   end
 end
